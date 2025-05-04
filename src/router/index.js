@@ -12,6 +12,17 @@ const router = createRouter({
       children: [{ path: '', name: 'PageLanding', component: PageLanding }],
     },
   ],
+  scrollBehavior(to, from) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        top: 50,
+        behavior: 'smooth',
+      }
+    }
+
+    return { top: 0 }
+  },
 })
 
 export default router

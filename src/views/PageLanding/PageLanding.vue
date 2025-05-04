@@ -2,7 +2,6 @@
   <div>
     <!-- about -->
 
-    <BaseButton />
     <!-- .... -->
   </div>
 </template>
@@ -12,3 +11,5 @@ export default {
   name: 'PageLanding',
 }
 </script>
+
+<style></style>
