@@ -18,3 +18,63 @@ body {
   line-height: 1.6;
   font-family: var(--font-mono);
 }
+
+/* headers */
+
+.heading-primary {
+  font-family: var(--font-flex);
+  font-size: var(--size-text-5xl);
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+.heading-secondary {
+  font-family: var(--font-flex);
+  font-size: var(--size-text-4xl);
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+.heading-thirdly-gray {
+  font-family: var(--font-mono);
+  font-size: 22px; /*добавить в variables*/
+  font-weight: 300;
+  color: var(--color-gray);
+}
+
+.heading-forthly {
+  font-family: var(--font-flex);
+  font-size: var(--size-text-l);
+  font-weight: 500;
+  color: var(--color-black);
+}
+
+.heading-fifthly {
+  font-family: var(--font-flex);
+  font-size: var(--size-text-m);
+  font-weight: 500;
+  color: var(--color-black);
+}
+
+/* text */
+
+.text-400 {
+  font-family: var(--font-mono);
+  font-size: var(--size-text-l);
+  font-weight: 400;
+  color: var(--color-primary);
+}
+
+.text-500 {
+  font-family: var(--font-mono);
+  font-size: var(--size-text-l);
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.text-700 {
+  font-family: var(--font-mono);
+  font-size: var(--size-text-l);
+  font-weight: 700;
+  color: var(--color-primary);
+}
