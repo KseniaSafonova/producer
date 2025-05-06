@@ -1,0 +1,133 @@
+/* titles */
+
+.heading-primary {
+  font-family: var(--font-flex);
+  font-size: var(--size-text-7xl);
+  font-weight: 600;
+  letter-spacing: 1.28px;
+}
+@media screen and (max-width: 768px) {
+  .heading-primary {
+    font-size: var(--size-text-5xl);
+  }
+}
+
+.heading-secondary {
+  font-family: var(--font-flex);
+  font-size: var(--size-text-6xl);
+  font-weight: 600;
+  letter-spacing: 1.6px;
+}
+@media screen and (max-width: 768px) {
+  .heading-secondary {
+    font-size: var(--size-text-3xl);
+  }
+}
+
+.heading-thirdly {
+  font-family: var(--font-mono);
+  font-size: var(--size-text-xl);
+  font-weight: 300;
+  letter-spacing: 2.64px;
+}
+@media screen and (max-width: 768px) {
+  .heading-thirdly {
+    font-size: var(--size-text-xs);
+  }
+}
+
+.heading-forthly {
+  font-family: var(--font-flex);
+  font-size: var(--size-text-l);
+  font-weight: 500;
+  letter-spacing: 2.4px;
+}
+
+.heading-fifthly {
+  font-family: var(--font-flex);
+  font-size: var(--size-text-m);
+  font-weight: 500;
+  letter-spacing: 2.16px;
+}
+@media screen and (max-width: 768px) {
+  .heading-fifthly {
+    font-size: var(--size-text-xs);
+  }
+}
+
+/* colors of headers & text*/
+
+.text-black {
+  color: var(--color-black);
+}
+
+.text-white {
+  color: var(--color-gray-30);
+}
+
+.text-gray {
+  color: var(--color-gray);
+}
+
+/* text - weights */
+
+.text-w400 {
+  font-weight: 400;
+}
+
+.text-w500 {
+  font-weight: 500;
+}
+
+.text-w700 {
+  font-weight: 700;
+}
+
+/* text - sizes */
+
+.text-l {
+  font-size: var(--size-text-l); /*20px*/
+}
+@media screen and (max-width: 768px) {
+  .text-l {
+    font-size: var(--size-text-3xs); /*14px*/
+  }
+}
+
+.text-m {
+  font-size: var(--size-text-m); /*18px*/
+}
+@media screen and (max-width: 768px) {
+  .text-m {
+    font-size: var(--size-text-2xs); /*15px*/
+  }
+}
+
+.text-s {
+  font-size: var(--size-text-s); /*17px*/
+}
+
+.text-2xs {
+  font-size: var(--size-text-2xs); /*15px*/
+}
+@media screen and (max-width: 768px) {
+  .text-2xs {
+    font-size: var(--size-text-3xs); /*14px*/
+  }
+}
+
+.text-3xs {
+  font-size: var(--size-text-3xs); /*14px*/
+}
+
+.text-4xs {
+  font-size: var(--size-text-4xs); /*13px*/
+}
+
+.text-5xs {
+  font-size: var(--size-text-5xs); /*12px*/
+}
+
+.text-6xs {
+  font-size: var(--size-text-6xs); /*10px*/
+}

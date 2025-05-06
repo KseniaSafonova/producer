@@ -14,18 +14,22 @@
   --font-flex: 'Roboto Flex', sans-serif;
 
   /* Font size */
-  --size-text-3xs: 10px;
-  --size-text-2xs: 12px;
-  --size-text-xs: 14px;
-  --size-text-s: 16px;
+  --size-text-6xs: 10px;
+  --size-text-5xs: 12px;
+  --size-text-4xs: 13px;
+  --size-text-3xs: 14px;
+  --size-text-2xs: 15px;
+  --size-text-xs: 16px;
+  --size-text-s: 17px;
   --size-text-m: 18px;
   --size-text-l: 20px;
-  --size-text-m: 24px;
-  --size-text-xl: 26px;
-  --size-text-2xl: 32px;
-  --size-text-3xl: 36px;
-  --size-text-4xl: 40px;
-  --size-text-5xl: 64px;
+  --size-text-xl: 22px;
+  --size-text-2xl: 24px;
+  --size-text-3xl: 26px;
+  --size-text-4xl: 32px;
+  --size-text-5xl: 36px;
+  --size-text-6xl: 40px;
+  --size-text-7xl: 64px;
 
   /* Line height */
 }
