@@ -6,12 +6,14 @@
     <!-- main -->
     <RouterView />
 
-    <!-- footer -->
-    <footer>footer</footer>
+    <!-- footer -->  
+     
+    <footer><Footer /></footer>
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'LayoutDefault',
 }
