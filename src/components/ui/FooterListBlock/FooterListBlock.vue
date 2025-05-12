@@ -57,6 +57,7 @@ ul {
   list-style-type: none;
   color: var(--color-gray);
   width: 271px;
+  font-family: var(--font-mono);
 }
 
 .listHeader {
@@ -64,5 +65,6 @@ ul {
   height: 44px;
   font-weight: 500;
   font-size: 18px;
+  font-family: var(--font-flex);
 }
 </style>

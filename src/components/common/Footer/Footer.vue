@@ -8,12 +8,13 @@ export default {
 
 <template>
   <div class="footer">
-    <div class="logo">LOGO</div>
+    <div class="logo">GLEB PETROV</div>
       <div class="mainFooterBlock">
+<!--  Контакты -->
       <div class="footerContactsBlock">
-        <div>+375293725243</div>
-        <div><a href="">info@glebpetrov.com</a></div>
-        <div>ИП Петров Глеб Владимирович</div>
+        <div class="phoneNumber">+375293725243</div>
+        <div class="mail">info@glebpetrov.com</div>
+        <div class="ip">ИП Петров Глеб Владимирович</div>
         <div class="socialNetworks">
           <img src="../../../assets/img/instagram.png" alt="">
           <a href="https://t.me/magistr_glebus">
@@ -21,6 +22,7 @@ export default {
           </a> 
         </div>
       </div>
+<!-- Меню -->
     <FooterListBlock/>
     </div>
   <div class="copyright">Copyright @ 2025 Gleb Petrov. All Right Reserved</div>
@@ -29,14 +31,24 @@ export default {
 
 <style lang="postcss">
 .footer {
-    background-color: var(--color-black);
-    height: 565px;
-    display: grid;  
+  background-color: var(--color-black);
+  height: 565px;
+  display: grid;  
 }
 
 .mainFooterBlock {
-    display: flex;
-  margin-top: 200px;
+  display: flex;
+  margin-top: 80px;
+}
+
+.logo {
+  color: var(--color-gray-30);
+  font-family: var(--font-flex);
+  margin-top: 120px;
+  margin-left: 80px;
+  font-weight: 700;
+  font-size: var(--size-text-3xl);
+  line-height: 24px;
 }
 
 .footerContactsBlock {
@@ -45,14 +57,42 @@ export default {
   margin-left: 80px;
 }
 
-.copyright {
-  color: var(--color-gray);
-  margin-top: 190px;
-  margin-left: 80px;
+.phoneNumber {
+  font-weight: 400;
+  font-size: var(--size-text-l);
+  font-family: var(--font-mono);
 }
 
-.logo {
-  margin-left: 80px;
-  color: white;
+.mail {
+  font-weight: 400;
+  font-size: 15px;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  font-family: var(--font-mono);
 }
+
+.ip {
+  font-weight: 400;
+  font-size: var(--size-text-2xs);
+  color: var(--color-gray);
+  margin-top: 15px;
+  font-family: var(--font-mono);
+}
+
+.socialNetworks {
+  margin-top: 30px;
+}
+
+.socialNetworks img {
+  margin-left: 10px;
+}
+
+.copyright {
+  color: var(--color-gray);
+  margin-top: 170px;
+  margin-left: 80px;
+  font-size: var(--size-text-2xs);
+  font-family: var(--font-mono);
+}
+
 </style>
