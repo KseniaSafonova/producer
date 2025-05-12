@@ -5,6 +5,7 @@
   font-size: var(--size-text-7xl);
   font-weight: 600;
   letter-spacing: 1.28px;
+  line-height: 100%;
 
   @media screen and (max-width: $sizeMobile) {
     font-size: var(--size-text-5xl);
@@ -15,6 +16,7 @@
   font-family: var(--font-flex);
   font-size: var(--size-text-6xl);
   font-weight: 600;
+  line-height: 120%;
   letter-spacing: 1.6px;
 
   @media screen and (max-width: $sizeMobile) {
@@ -27,6 +29,7 @@
   font-size: var(--size-text-xl);
   font-weight: 300;
   letter-spacing: 2.64px;
+  line-height: 120%;
 
   @media screen and (max-width: $sizeMobile) {
     font-size: var(--size-text-xs);
@@ -38,6 +41,7 @@
   font-size: var(--size-text-l);
   font-weight: 500;
   letter-spacing: 2.4px;
+  line-height: 120%;
 }
 
 .heading-fifthly {
@@ -45,6 +49,7 @@
   font-size: var(--size-text-m);
   font-weight: 500;
   letter-spacing: 2.16px;
+  line-height: 120%;
 
   @media screen and (max-width: $sizeMobile) {
     font-size: var(--size-text-xs);
