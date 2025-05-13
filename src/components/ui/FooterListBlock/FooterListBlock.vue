@@ -4,12 +4,7 @@ import {ref} from 'vue';
 export default {
   name: 'FooterListBlock',
   setup() {
-    const conditions = ref([
-      { text: 'Условия использования' },
-      { text: 'Политика конфиденциальности' },
-    ]);
-
-    const main = ref([
+       const main = ref([
       {text: 'Главная'}, 
       {text: 'Обо мне'}, 
       {text: 'Связаться со мной'}
@@ -20,19 +15,13 @@ export default {
       {text: 'Портфолио'}
     ]);
 
-    return { conditions, main, services };
+    return { main, services };
   }
 }
 
 </script>
 
 <template>
-    <ul>
-      <div class="listHeader">Условия и политика</div>
-        <li v-for="condition in conditions">
-        <a href="">{{ condition.text }}</a>  
-        </li>
-    </ul>
     <ul>
       <div class="listHeader">Gleb Petrov</div>
         <li v-for="item in main">

@@ -16,9 +16,11 @@ export default {
         <div class="mail">info@glebpetrov.com</div>
         <div class="ip">ИП Петров Глеб Владимирович</div>
         <div class="socialNetworks">
-          <img src="../../../assets/img/instagram.png" alt="">
+          <a href="https://www.instagram.com/magistr_glebus/">
+            <img src="../../../assets/img/instagram.png" alt="">
+          </a>
           <a href="https://t.me/magistr_glebus">
-          <img src="../../../assets/img/telegram.png" alt="">
+            <img src="../../../assets/img/telegram.png" alt="">
           </a> 
         </div>
       </div>
@@ -65,15 +67,16 @@ export default {
 
 .mail {
   font-weight: 400;
-  font-size: 15px;
+  font-size: var(--size-text-2xs);
   text-decoration: underline;
   text-decoration-style: solid;
   font-family: var(--font-mono);
+  line-height: 150%;
 }
 
 .ip {
   font-weight: 400;
-  font-size: var(--size-text-2xs);
+  font-size: var(--size-text-5xs);
   color: var(--color-gray);
   margin-top: 15px;
   font-family: var(--font-mono);
@@ -91,7 +94,7 @@ export default {
   color: var(--color-gray);
   margin-top: 170px;
   margin-left: 80px;
-  font-size: var(--size-text-2xs);
+  font-size: var(--size-text-5xs);
   font-family: var(--font-mono);
 }
 
