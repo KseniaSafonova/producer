@@ -35,12 +35,14 @@ export default {
 .footer {
   background-color: var(--color-black);
   height: 565px;
+  width: 100%;
   display: grid;  
 }
 
 .mainFooterBlock {
   display: flex;
   margin-top: 80px;
+  width: 100%;
 }
 
 .logo {
@@ -97,6 +99,29 @@ export default {
   margin-left: 80px;
   font-size: var(--size-text-5xs);
   font-family: var(--font-mono);
+}
+
+@media (max-width: 768px) {
+
+  .footer {
+    height: 793px;
+  }
+
+  .mainFooterBlock {
+    display: grid;
+    height: 565px;
+    margin-top: 20px;
+  }
+
+  .logo {
+    margin-top: 50px;
+    margin-left: 10px;
+  }
+
+  .footerContactsBlock {
+  margin-left: 0px;
+  width: 100%;
+}
 }
 
 </style>

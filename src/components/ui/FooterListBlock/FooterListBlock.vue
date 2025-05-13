@@ -39,13 +39,13 @@ export default {
 <style lang="postcss">
 a {
 text-decoration: none;
-font-size: 15px;
+font-size: var(--size-text-2xs);
 }
 
 ul {
   list-style-type: none;
   color: var(--color-gray);
-  width: 271px;
+  width: 260px;
   font-family: var(--font-mono);
 }
 
@@ -53,7 +53,15 @@ ul {
   color: var(--color-white);
   height: 44px;
   font-weight: 500;
-  font-size: 18px;
+  font-size: var(--size-text-m);
   font-family: var(--font-flex);
+  letter-spacing: 0.2em;
+}
+
+@media (max-width: 768px) {
+
+  .footer {
+    height: 793px;
+  }
 }
 </style>
