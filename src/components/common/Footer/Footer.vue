@@ -68,6 +68,7 @@ export default {
 .mail {
   font-weight: 400;
   font-size: var(--size-text-2xs);
+  font-size: 15px;
   text-decoration: underline;
   text-decoration-style: solid;
   font-family: var(--font-mono);
