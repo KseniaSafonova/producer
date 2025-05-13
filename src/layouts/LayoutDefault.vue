@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- header -->
-    <header>хэдер</header>
+    <BlockHeader />
 
     <!-- main -->
     <RouterView />

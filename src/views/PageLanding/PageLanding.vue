@@ -1,8 +1,8 @@
 <template>
   <div>
     <!-- about -->
+    <BlockAbout />
 
-    <BaseButton />
     <!-- .... -->
   </div>
 </template>
@@ -12,3 +12,5 @@ export default {
   name: 'PageLanding',
 }
 </script>
+
+<style></style>
