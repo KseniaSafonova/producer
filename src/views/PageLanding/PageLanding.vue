@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- about -->
-    <BlockAbout />
+    <BlockAbout id="about" />
 
     <!-- .... -->
   </div>
