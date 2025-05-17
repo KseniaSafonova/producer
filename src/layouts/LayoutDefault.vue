@@ -14,6 +14,10 @@
 </template>
 
 <script>
+
+import { useMenuStore } from '@/store/menuStore'
+import { storeToRefs } from 'pinia'
+
 export default {
   name: 'LayoutDefault',
 
