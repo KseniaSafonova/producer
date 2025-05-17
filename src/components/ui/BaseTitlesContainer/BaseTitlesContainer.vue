@@ -7,7 +7,11 @@
 
   <div class="titles-container" :class="[alignTitlesContClass]">
     <h2 class="heading-thirdly text-gray">[{{ title }}]</h2>
-    <h3 class="heading-secondary">{{ subtitle }}</h3>
+
+    <h3 class="heading-secondary" v-if="subtitle" />
+    <h3 class="heading-secondary" v-if="$slots.subtitle">
+      <slot name="subtitle" />
+    </h3>
   </div>
 </template>
 
@@ -41,7 +45,7 @@ export default {
 
 <style>
 .titles-container {
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -53,5 +57,11 @@ export default {
 
 .titles-container_align-right {
   text-align: right;
+}
+
+.heading-secondary {
+  display: inline-flex;
+  flex-wrap: wrap;
+  column-gap: 12px;
 }
 </style>

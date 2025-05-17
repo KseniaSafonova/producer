@@ -20,7 +20,7 @@
   letter-spacing: 1.6px;
 
   @media screen and (max-width: $sizeMobile) {
-    font-size: var(--size-text-3xl);
+    font-size: var(--size-text-4xl);
   }
 }
 
@@ -90,7 +90,7 @@
   font-size: var(--size-text-l); /*20px*/
 
   @media screen and (max-width: $sizeMobile) {
-    font-size: var(--size-text-3xs); /*14px*/
+    font-size: var(--size-text-xs); /*16px*/
   }
 }
 
