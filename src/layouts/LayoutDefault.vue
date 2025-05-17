@@ -9,8 +9,7 @@
     </main>
 
     <!-- footer -->  
-     
-    <footer><Footer /></footer>
+    <Footer />
   </div>
 </template>
 
