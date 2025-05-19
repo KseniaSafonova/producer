@@ -22,6 +22,7 @@ export default {
 </script>
 
 <template>
+  <div class="footerListBlock">
     <ul>
       <div class="listHeader">Gleb Petrov</div>
         <li v-for="item in main">
@@ -34,6 +35,7 @@ export default {
           <a href="">{{ service.text }}</a>
         </li>
     </ul>
+  </div>
 </template>
 
 <style lang="postcss">
@@ -56,12 +58,30 @@ ul {
   font-size: var(--size-text-m);
   font-family: var(--font-flex);
   letter-spacing: 0.2em;
+
 }
 
 @media (max-width: 768px) {
 
   .footer {
     height: 793px;
+  }
+
+  ul {
+  margin-top: 40px;
+  }
+
+  li {
+    margin-top: 10px;
+  }
+
+.listHeader {
+  height: 30px;
+}
+
+  .footerListBlock{
+    margin-top: -130px;
+    margin-left: 15px;
   }
 }
 </style>

@@ -115,12 +115,21 @@ export default {
 
   .logo {
     margin-top: 50px;
-    margin-left: 10px;
+    margin-left: 15px;
   }
 
   .footerContactsBlock {
-  margin-left: 0px;
   width: 100%;
+  margin-left: 15px;
+}
+
+.mail {
+  margin-top: 8px;
+}
+
+.copyright {
+  margin-top: 100px;
+  margin-left: 15px;
 }
 }
 
