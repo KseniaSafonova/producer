@@ -67,7 +67,7 @@ export default {
 
 <style lang="postcss">
 .block-services__container {
-  padding-top: 92px;
+  padding-top: 72px;
   padding-bottom: 120px;
 
   @media screen and (max-width: $sizeMobile) {
@@ -117,11 +117,12 @@ export default {
 }
 
 .block-services__btn {
-  max-width: 197px;
+  max-width: 100%;
+  width: 197px;
   margin-top: 40px;
 
   @media screen and (max-width: $sizeMobile) {
-    max-width: 194px;
+    width: 194px;
   }
 }
 </style>

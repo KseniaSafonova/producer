@@ -136,12 +136,13 @@ export default {
 }
 
 .block-about__btn {
-  max-width: 197px;
+  max-width: 100%;
+  width: 197px;
   margin-top: 75px;
   margin-bottom: 75px;
 
   @media screen and (max-width: $sizeMobile) {
-    max-width: 194px;
+    width: 194px;
     margin-top: 40px;
     margin-bottom: 20px;
   }
