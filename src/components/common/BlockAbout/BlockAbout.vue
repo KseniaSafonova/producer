@@ -2,27 +2,31 @@
   <BaseContainer :theme="containerTheme" class="block-about">
     <div class="block-about__container">
       <div class="block-about__text-section">
-        <div class="block-about__text">
-          <BaseTitlesContainer title="Обо мне" class="block-about__title">
-            <template #subtitle>
-              <span>Уникален не я, </span>
-              <span>а мой опыт</span>
-            </template>
-          </BaseTitlesContainer>
+        <BaseTitlesContainer title="Обо мне" class="block-about__title">
+          <template #subtitle>
+            <span>Уникален не я, </span>
+            <span>а мой опыт</span>
+          </template>
+        </BaseTitlesContainer>
 
-          <p class="text-l text-black block-about__text-indent">
-            Годы в Премьер и Высшей Лиге КВН, сценаристика, реклама, документалистика, работа с
-            художниками, фестивалями, диджеинг, йога — и параллельно проекты для бизнеса,
-            государства, стартапов и IT.
-          </p>
+        <p class="text-l text-black block-about__text">
+          Годы в Премьер и Высшей Лиге КВН, сценаристика, реклама, документалистика, работа с
+          художниками, фестивалями, диджеинг, йога — и параллельно проекты для бизнеса, государства,
+          стартапов и IT.
+        </p>
 
-          <p class="text-l text-black">
-            Этот опыт дал мне сеть нестандартно мыслящих людей, чьи таланты я привлекаю под идею и
-            задачу.
-          </p>
+        <p class="text-l text-black block-about__text">
+          Этот опыт дал мне сеть нестандартно мыслящих людей, чьи таланты я привлекаю под идею и
+          задачу.
+        </p>
 
-          <BaseButton href="" size="small" class="block-about__btn">Портфолио</BaseButton>
-        </div>
+        <BaseButton
+          href="https://docs.google.com/presentation/d/19Qhdi8mnNJEgEIKN8O-7NqRhBYQnq1Cd-QV_YvZkKtQ/edit?usp=sharing"
+          target="_blank"
+          size="small"
+          class="block-about__btn"
+          >Портфолио</BaseButton
+        >
       </div>
 
       <div class="block-about__img-section">
@@ -87,6 +91,7 @@ export default {
   position: relative;
   flex: 1 1 60%;
   padding-top: 40px;
+  padding-right: 25%;
 
   @media screen and (max-width: $sizeTablet) {
     margin: -15px -15px;
@@ -119,25 +124,24 @@ export default {
 }
 
 .block-about__text {
-  padding-right: 38%;
+  max-width: 522px;
 
-  @media screen and (max-width: $sizeTablet) {
-    padding-right: initial;
-    max-width: 522px;
+  @media screen and (max-width: $sizeMobile) {
+    font-size: var(--size-text-xs);
   }
 }
 
-.block-about__text-indent {
+.block-about__text:not(:last-child) {
   margin-bottom: 30px;
 }
 
 .block-about__btn {
-  width: 197px;
+  max-width: 197px;
   margin-top: 75px;
   margin-bottom: 75px;
 
   @media screen and (max-width: $sizeMobile) {
-    width: 194px;
+    max-width: 194px;
     margin-top: 40px;
     margin-bottom: 20px;
   }

@@ -2,6 +2,8 @@
   <div>
     <!-- about -->
     <BlockAbout id="about" />
+    <!-- services -->
+    <BlockServices id="services" />
 
     <!-- .... -->
   </div>
