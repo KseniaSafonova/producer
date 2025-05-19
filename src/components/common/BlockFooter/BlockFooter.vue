@@ -37,12 +37,22 @@ export default {
   height: 565px;
   width: 100%;
   display: grid;  
+
+  @media (max-width: 768px) {
+    height: 793px;
+  }
 }
 
 .mainFooterBlock {
   display: flex;
   margin-top: 80px;
   width: 100%;
+
+  @media (max-width: 768px) {
+    display: grid;
+    height: 565px;
+    margin-top: 20px;
+  }
 }
 
 .logo {
@@ -53,12 +63,22 @@ export default {
   font-weight: 700;
   font-size: var(--size-text-3xl);
   line-height: 24px;
+
+  @media (max-width: 768px) {
+    margin-top: 50px;
+    margin-left: 15px;
+  }
 }
 
 .footerContactsBlock {
   width: 413px;
   color: var(--color-gray-30);
   margin-left: 80px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-left: 15px;
+  }
 }
 
 .phoneNumber {
@@ -75,6 +95,10 @@ export default {
   text-decoration-style: solid;
   font-family: var(--font-mono);
   line-height: 150%;
+
+  @media (max-width: 768px) {
+    margin-top: 8px;
+  }
 }
 
 .ip {
@@ -99,37 +123,11 @@ export default {
   margin-left: 80px;
   font-size: var(--size-text-5xs);
   font-family: var(--font-mono);
-}
 
-@media (max-width: 768px) {
-
-  .footer {
-    height: 793px;
-  }
-
-  .mainFooterBlock {
-    display: grid;
-    height: 565px;
-    margin-top: 20px;
-  }
-
-  .logo {
-    margin-top: 50px;
-    margin-left: 15px;
-  }
-
-  .footerContactsBlock {
-    width: 100%;
-    margin-left: 15px;
-  }
-
-  .mail {
-    margin-top: 8px;
-  }
-
-  .copyright {
+    @media (max-width: 768px) {
     margin-top: 100px;
     margin-left: 15px;
   }
 }
+
 </style>

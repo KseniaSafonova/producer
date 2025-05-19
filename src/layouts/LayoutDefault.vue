@@ -9,7 +9,7 @@
     </main>
 
     <!-- footer -->  
-    <Footer />
+    <BlockFooter />
   </div>
 </template>
 

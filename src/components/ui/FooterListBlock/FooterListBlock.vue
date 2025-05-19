@@ -49,6 +49,16 @@ ul {
   color: var(--color-gray);
   width: 260px;
   font-family: var(--font-mono);
+   
+  @media (max-width: 768px) {
+    margin-top: 40px;
+  }
+}
+
+li {
+  @media (max-width: 768px) {
+    margin-top: 10px;
+  }
 }
 
 .listHeader {
@@ -58,30 +68,17 @@ ul {
   font-size: var(--size-text-m);
   font-family: var(--font-flex);
   letter-spacing: 0.2em;
-
 }
 
-@media (max-width: 768px) {
+   .footerListBlock {
+    display: flex;
 
-  .footer {
-    height: 793px;
+    @media (max-width: 768px) {
+      display: block;
+      margin-top: -130px;
+      margin-left: 15px;
+    }
+   
   }
 
-  ul {
-    margin-top: 40px;
-  }
-
-  li {
-    margin-top: 10px;
-  }
-
-  .listHeader {
-    height: 30px;
-  }
-
-  .footerListBlock{
-    margin-top: -130px;
-    margin-left: 15px;
-  }
-}
 </style>
