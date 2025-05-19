@@ -40,8 +40,8 @@ export default {
 
 <style lang="postcss">
 a {
-text-decoration: none;
-font-size: var(--size-text-2xs);
+  text-decoration: none;
+  font-size: var(--size-text-2xs);
 }
 
 ul {
@@ -68,16 +68,16 @@ ul {
   }
 
   ul {
-  margin-top: 40px;
+    margin-top: 40px;
   }
 
   li {
     margin-top: 10px;
   }
 
-.listHeader {
-  height: 30px;
-}
+  .listHeader {
+    height: 30px;
+  }
 
   .footerListBlock{
     margin-top: -130px;

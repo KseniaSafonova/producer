@@ -119,18 +119,17 @@ export default {
   }
 
   .footerContactsBlock {
-  width: 100%;
-  margin-left: 15px;
-}
+    width: 100%;
+    margin-left: 15px;
+  }
 
-.mail {
-  margin-top: 8px;
-}
+  .mail {
+    margin-top: 8px;
+  }
 
-.copyright {
-  margin-top: 100px;
-  margin-left: 15px;
+  .copyright {
+    margin-top: 100px;
+    margin-left: 15px;
+  }
 }
-}
-
 </style>
