@@ -107,7 +107,7 @@ const submitForm = async () => {
 
   try{
     const payload = new FormData(contactForm.value!)
-    const response = await fetch('https://formsubmit.co/ajax/kapustaeugenia@gmail.com', {
+    const response = await fetch('https://formsubmit.co/ajax/info@glebpetrov.com', {
       method: 'POST',
       headers: { 'Accept': 'application/json' },
       body: payload
