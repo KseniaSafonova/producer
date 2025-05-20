@@ -6,13 +6,15 @@
     <BlockServices id="services" />
 
     <!-- .... -->
+
+    <!-- Секция Контакты -->  
+    <BlockContacts id="contacts"/>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'PageLanding',
-}
+// import BlockContacts from '@/components/common/BlockContacts/BlockContacts.vue';
+
 </script>
 
 <style></style>
