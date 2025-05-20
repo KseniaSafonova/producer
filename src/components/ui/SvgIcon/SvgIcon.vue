@@ -33,7 +33,7 @@ export default {
 
 <style>
 .svg-icon {
-  fill: currentColor;
+ /* fill: currentColor;*/
 
   width: v-bind(size);
   height: v-bind(size);
