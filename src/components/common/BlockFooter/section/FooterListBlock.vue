@@ -2,39 +2,59 @@
   <div class="block-footer__listBlock">
     <ul class="block-footer__list" >
       <div class="block-footer__listHeader">Gleb Petrov</div>
-        <li class="block-footer__listItem" v-for="(item, index) in main" :key="index">
-          <a class="block-footer__link" href="">{{ item.text }}</a>
-        </li>
+        <li v-for="(nav, index) in navList" :key="index" class="footer-list-block__list-item">
+          <RouterLink v-if="nav.link" :to="nav.link" class="footer-list-block__link">
+            {{ nav.text }}
+          </RouterLink>
+        <a v-if="nav.href" :href="nav.href" class="footer-list-block__link">
+          {{ nav.text }}
+        </a>
+      </li>
     </ul>
     <ul class="block-footer__list">
       <div class="block-footer__listHeader">Услуги</div>
-        <li class="block-footer__listItem" v-for="(service, index) in services" :key="index">
-          <a class="block-footer__link" href="">{{ service.text }}</a>
-        </li>
+        <li v-for="(service, index) in servicesList" :key="index" class="footer-list-block__list-item">
+          <RouterLink v-if="service.link" :to="service.link" class="footer-list-block__link">
+            {{ service.text }}
+          </RouterLink>
+        <a v-if="service.href" :href="service.href" class="footer-list-block__link">
+          {{ service.text }}
+        </a>
+      </li>
     </ul>
   </div>
 </template>
 
 <script>
-import {ref} from 'vue';
+
+import { computed } from 'vue';
 
 export default {
-  name: 'FooterListBlock',
   setup() {
-       const main = ref([
-      {text: 'Главная'}, 
-      {text: 'Обо мне'}, 
-      {text: 'Связаться со мной'}
-    ]);
+    const navList = computed(() => {
+      return [
+        { text: 'Главная', link: { name: 'PageLanding', hash: '#main' } },
+        { text: 'Обо мне', link: { name: 'PageLanding', hash: '#about' } },
+        { text: 'Связаться со мной', link: { name: 'PageLanding', hash: '#contacts' } },
+      ];
+    });
 
-    const services = ref([
-      {text: 'Список услуг'}, 
-      {text: 'Портфолио'}
-    ]);
+    const servicesList = computed(() => {
+      return [
+        { text: 'Список услуг', link: { name: 'PageLanding', hash: '#services' } },
+        {
+          text: 'Портфолио',
+          href: 'https://docs.google.com/presentation/d/19Qhdi8mnNJEgEIKN8O-7NqRhBYQnq1Cd-QV_YvZkKtQ/edit?usp=sharing',
+        },
+      ];
+    });
 
-    return { main, services };
-  }
-}
+    return {
+      navList,
+      servicesList,
+    };
+  },
+};
 
 </script>
 
@@ -59,18 +79,19 @@ export default {
   letter-spacing: 0.2em;
 }
 
-.block-footer__link {
+.footer-list-block__link {
   text-decoration: none;
   font-size: var(--size-text-2xs);
+  color: var(--color-gray);
+  transition: color 0.6s;
 }
 
-.block-footer__link:hover {
+.footer-list-block__link:hover {
   color: var(--color-white);
 }
 
 .block-footer__list {
   list-style-type: none;
-  color: var(--color-gray);
   width: 260px;
   font-family: var(--font-mono);
    
@@ -79,7 +100,7 @@ export default {
   }
 }
 
-.block-footer__listItem {
+.footer-list-block__list-item {
   @media (max-width: 768px) {
     margin-top: 10px;
   }

@@ -5,10 +5,10 @@
       <div class="block-footer__mainBlock">
 <!--  Контакты -->
       <div class="block-footer__сontacts">
-        <div class="block-footer__phoneNumber">+375293725243</div>
-        <div class="block-footer__email">info@glebpetrov.com</div>
+        <div class="block-footer__phone-number"><a href="tel:+375293725243">+375293725243</a></div>
+        <div class="block-footer__email"><a href="mailto:info@glebpetrov.com">info@glebpetrov.com</a></div>
         <div class="block-footer__ip">ИП Петров Глеб Владимирович</div>
-        <div class="block-footer__socialNetworks">
+        <div class="block-footer__social-networks">
           <a href="https://www.instagram.com/magistr_glebus/"> 
             <SvgIcon name="instagram" iconSize="20" fill="var(--color-gray)" class="block-footer__socialNetworks-img"/>
           </a>
@@ -20,15 +20,16 @@
 <!-- Меню -->
     <FooterListBlock/>
     </div>
-  <div class="block-footer__copyright">Copyright @ 2025 Gleb Petrov. All Right Reserved</div>
   </div>
+<div class="block-footer__copyright">Copyright @ 2025 Gleb Petrov. All Right Reserved</div>
   </BaseContainer>
+  
 </template>
 
 <script>
 
 export default {
-  name: 'Footer',
+  name: 'BlockFooter',
 }
 
 </script>
@@ -46,8 +47,8 @@ export default {
 
 .block-footer__mainBlock {
   display: flex;
-  margin-top: 80px;
   width: 100%;
+  margin-top: -150px;
 
   @media (max-width: 768px) {
     display: grid;
@@ -59,11 +60,12 @@ export default {
 .block-footer__logo {
   color: var(--color-gray-30);
   font-family: var(--font-flex);
-  margin-top: 120px;
-  margin-left: 80px;
+  margin-top: 80px;
+  margin-left: 50px;
   font-weight: 700;
   font-size: var(--size-text-3xl);
   line-height: 24px;
+  height: 25px;
 
   @media (max-width: 768px) {
     margin-top: 50px;
@@ -74,7 +76,7 @@ export default {
 .block-footer__сontacts {
   width: 413px;
   color: var(--color-gray-30);
-  margin-left: 80px;
+  margin-left: 50px;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -82,10 +84,14 @@ export default {
   }
 }
 
-.block-footer__phoneNumber {
+.block-footer__phone-number {
   font-weight: 400;
   font-size: var(--size-text-l);
   font-family: var(--font-mono);
+}
+
+.block-footer__phone-number a{
+  text-decoration: none;
 }
 
 .block-footer__email {
@@ -110,7 +116,7 @@ export default {
   font-family: var(--font-mono);
 }
 
-.block-footer__socialNetworks {
+.block-footer__social-networks {
   margin-top: 30px;
 }
 
@@ -120,10 +126,11 @@ export default {
 
 .block-footer__copyright {
   color: var(--color-gray);
-  margin-top: 170px;
-  margin-left: 80px;
+  margin-left: 50px;
   font-size: var(--size-text-5xs);
   font-family: var(--font-mono);
+  height: 20px;
+  margin-bottom: -15px;
 
     @media (max-width: 768px) {
     margin-top: 100px;
