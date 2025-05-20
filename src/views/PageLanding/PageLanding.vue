@@ -4,6 +4,7 @@
     <BlockAbout id="about" />
     <!-- services -->
     <BlockServices id="services" />
+    <CasesSection id="cases" />
 
     <!-- .... -->
 
