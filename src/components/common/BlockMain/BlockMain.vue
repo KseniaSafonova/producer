@@ -27,6 +27,10 @@ export default {
 </script>
 
 <style lang="postcss">
+.block-main {
+  padding-bottom: 62px;
+}
+
 .block-main .base-container__inner {
   display: flex;
   flex-direction: column;
@@ -55,7 +59,7 @@ export default {
 }
 
 .block-main__img {
-  max-width: 720px;
+  max-width: 800px;
   padding-left: 40px;
   padding-right: 40px;
 

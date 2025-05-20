@@ -74,6 +74,7 @@ export default {
   $sizeTablet: 1200px;
 
   overflow: hidden;
+  padding-bottom: 28px;
 }
 
 .block-about__container {
@@ -131,7 +132,7 @@ export default {
   }
 }
 
-.block-about__text:not(:last-child) {
+.block-about__text:not(:last-of-type) {
   margin-bottom: 30px;
 }
 

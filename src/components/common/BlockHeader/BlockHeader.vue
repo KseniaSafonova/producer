@@ -72,13 +72,28 @@ export default {
     return { isMobile, isMenuOpen, toggleMenu, openMenu, closeMenu }
   },
 
+  data() {
+    return {
+      currentItem: '#main',
+    }
+  },
+
+  watch: {
+    $route: {
+      immediate: true,
+      handler() {
+        this.currentItem = this.$route.hash
+      },
+    },
+  },
+
   computed: {
     navList() {
       return [
-        { name: 'Главная', link: { name: 'PageLanding', hash: '#main' } },
-        { name: 'Обо мне', link: { name: 'PageLanding', hash: '#about' } },
-        { name: 'Услуги', link: { name: 'PageLanding', hash: '#services' } },
-        { name: 'Кейсы', link: { name: 'PageLanding', hash: '#cases' } },
+        { name: 'Главная', link: { name: 'PageLanding', hash: 'main' } },
+        { name: 'Обо мне', link: { name: 'PageLanding', hash: 'about' } },
+        { name: 'Услуги', link: { name: 'PageLanding', hash: 'services' } },
+        { name: 'Кейсы', link: { name: 'PageLanding', hash: 'cases' } },
       ]
     },
 
@@ -91,17 +106,50 @@ export default {
     },
   },
 
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll)
+    this.handleScroll()
+  },
+
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
+
   methods: {
     isSelected(link) {
-      if (link.name === this.$route.name && link.hash === this.$route.hash) {
+      if (link.name === this.$route.name && `#${link.hash}` === this.currentItem) {
         return true
       }
 
-      if (link.hash === '#main' && this.$route.hash === '') {
+      if (`#${link.hash}` === '#main' && this.currentItem === '') {
         return true
       }
 
       return false
+    },
+
+    handleScroll() {
+      const sections = this.navList.map((item) => item.link.hash)
+      const scrollPosition = window.scrollY + 100
+
+      let isFound = false
+      for (const section of sections) {
+        const element = document.getElementById(section)
+        if (!element) continue
+
+        const offsetTop = element.offsetTop
+        const offsetHeight = element.offsetHeight
+
+        if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+          this.currentItem = `#${section}`
+          isFound = true
+          break
+        }
+      }
+
+      if (!isFound) {
+        this.currentItem = `not found`
+      }
     },
   },
 }
