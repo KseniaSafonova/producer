@@ -3,7 +3,7 @@
     tag="header"
     theme="dark"
     class="block-header"
-    :class="{ 'block-header_is-mobile': isMobile }"
+    :class="{ 'block-header_is-open': isMenuOpen, 'block-header_is-mobile': isMobile }"
   >
     <span class="block-header__logo text-w700">Gleb Petrov</span>
 
@@ -111,13 +111,15 @@ export default {
 .block-header {
   $headerTabletSize: 850px;
 
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
   overflow-y: auto;
+  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+  max-height: 100vh;
 }
 
 .block-header .base-container__inner {
@@ -147,7 +149,11 @@ export default {
   line-height: 48px;
 
   @media (max-width: $sizeMobile) {
-    max-width: 200px;
+    max-width: 50px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: var(--size-text-3xl);
   }
 }
 
@@ -163,7 +169,7 @@ export default {
   flex-direction: column;
   align-items: stretch;
   gap: 24px;
-  padding: 36px 24px 80px 24px;
+  margin: 36px 12px 60px 12px;
   width: 100%;
   background-color: var(--color-black);
 }
@@ -244,6 +250,6 @@ export default {
 
 .burger-leave-to {
   opacity: 0;
-  transform: translateX(-20px);
+  transform: translateX(-40px);
 }
 </style>

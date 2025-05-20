@@ -1,21 +1,19 @@
 <template>
   <div>
-    <!-- about -->
+    <BlockMain id="main" />
     <BlockAbout id="about" />
-    <!-- services -->
     <BlockServices id="services" />
     <CasesSection id="cases" />
 
     <!-- .... -->
 
-    <!-- Секция Контакты -->  
-    <BlockContacts id="contacts"/>
+    <!-- Секция Контакты -->
+    <BlockContacts id="contacts" />
   </div>
 </template>
 
 <script>
 // import BlockContacts from '@/components/common/BlockContacts/BlockContacts.vue';
-
 </script>
 
 <style></style>

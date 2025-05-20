@@ -4,7 +4,7 @@
     <BlockHeader />
 
     <!-- main -->
-    <main>
+    <main class="layout-default__main">
       <RouterView />
     </main>
 
@@ -27,17 +27,18 @@ export default {
 
     return { isMenuOpen }
   },
+
+  watch: {
+    isMenuOpen(isOpen) {
+      document.body.style.overflow = isOpen ? 'hidden' : ''
+    },
+  },
 }
 </script>
 
 <style lang="postcss">
 .layout-default {
   position: relative;
-}
-
-.layout-default.layout-default_drawer {
-  overflow: hidden;
-  height: 100vh;
 }
 
 .layout-default_drawer::after {
@@ -51,5 +52,9 @@ export default {
   opacity: 0.8;
   background-color: var(--color-black);
   z-index: 10;
+}
+
+.layout-default__main {
+  margin-top: 60px;
 }
 </style>
