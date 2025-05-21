@@ -90,10 +90,10 @@ export default {
   computed: {
     navList() {
       return [
-        { name: 'Главная', link: { name: 'PageLanding', hash: 'main' } },
-        { name: 'Обо мне', link: { name: 'PageLanding', hash: 'about' } },
-        { name: 'Услуги', link: { name: 'PageLanding', hash: 'services' } },
-        { name: 'Кейсы', link: { name: 'PageLanding', hash: 'cases' } },
+        { name: 'Главная', link: { name: 'PageLanding', hash: '#main' } },
+        { name: 'Обо мне', link: { name: 'PageLanding', hash: '#about' } },
+        { name: 'Услуги', link: { name: 'PageLanding', hash: '#services' } },
+        { name: 'Кейсы', link: { name: 'PageLanding', hash: '#cases' } },
       ]
     },
 
@@ -117,11 +117,11 @@ export default {
 
   methods: {
     isSelected(link) {
-      if (link.name === this.$route.name && `#${link.hash}` === this.currentItem) {
+      if (link.name === this.$route.name && `${link.hash}` === this.currentItem) {
         return true
       }
 
-      if (`#${link.hash}` === '#main' && this.currentItem === '') {
+      if (`${link.hash}` === '#main' && this.currentItem === '') {
         return true
       }
 
@@ -129,7 +129,7 @@ export default {
     },
 
     handleScroll() {
-      const sections = this.navList.map((item) => item.link.hash)
+      const sections = this.navList.map((item) => item.link.hash.replace('#', ''))
       const scrollPosition = window.scrollY + 100
 
       let isFound = false
