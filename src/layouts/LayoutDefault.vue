@@ -8,8 +8,7 @@
       <RouterView />
     </main>
 
-    <!-- footer -->
-    <footer>footer</footer>
+    <BlockFooter id="contacts" />
   </div>
 </template>
 
