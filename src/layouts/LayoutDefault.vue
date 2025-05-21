@@ -8,13 +8,11 @@
       <RouterView />
     </main>
 
-    <!-- footer -->  
-    <BlockFooter />
+    <BlockFooter id="contacts" />
   </div>
 </template>
 
 <script>
-
 import { useMenuStore } from '@/store/menuStore'
 import { storeToRefs } from 'pinia'
 

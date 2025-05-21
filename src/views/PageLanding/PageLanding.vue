@@ -2,8 +2,6 @@
   <div>
     <!-- about -->
     <BlockAbout id="about" />
-
-    <!-- .... -->
   </div>
 </template>
 
