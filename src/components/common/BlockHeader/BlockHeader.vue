@@ -3,7 +3,7 @@
     tag="header"
     theme="dark"
     class="block-header"
-    :class="{ 'block-header_is-mobile': isMobile }"
+    :class="{ 'block-header_is-open': isMenuOpen, 'block-header_is-mobile': isMobile }"
   >
     <span class="block-header__logo text-w700">Gleb Petrov</span>
 
@@ -72,13 +72,28 @@ export default {
     return { isMobile, isMenuOpen, toggleMenu, openMenu, closeMenu }
   },
 
+  data() {
+    return {
+      currentItem: '#main',
+    }
+  },
+
+  watch: {
+    $route: {
+      immediate: true,
+      handler() {
+        this.currentItem = this.$route.hash
+      },
+    },
+  },
+
   computed: {
     navList() {
       return [
-        { name: 'Главная', link: { name: 'PageLanding', hash: '#main' } },
-        { name: 'Обо мне', link: { name: 'PageLanding', hash: '#about' } },
-        { name: 'Услуги', link: { name: 'PageLanding', hash: '#services' } },
-        { name: 'Кейсы', link: { name: 'PageLanding', hash: '#cases' } },
+        { name: 'Главная', link: { name: 'PageLanding', hash: 'main' } },
+        { name: 'Обо мне', link: { name: 'PageLanding', hash: 'about' } },
+        { name: 'Услуги', link: { name: 'PageLanding', hash: 'services' } },
+        { name: 'Кейсы', link: { name: 'PageLanding', hash: 'cases' } },
       ]
     },
 
@@ -91,17 +106,50 @@ export default {
     },
   },
 
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll)
+    this.handleScroll()
+  },
+
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
+
   methods: {
     isSelected(link) {
-      if (link.name === this.$route.name && link.hash === this.$route.hash) {
+      if (link.name === this.$route.name && `#${link.hash}` === this.currentItem) {
         return true
       }
 
-      if (link.hash === '#main' && this.$route.hash === '') {
+      if (`#${link.hash}` === '#main' && this.currentItem === '') {
         return true
       }
 
       return false
+    },
+
+    handleScroll() {
+      const sections = this.navList.map((item) => item.link.hash)
+      const scrollPosition = window.scrollY + 100
+
+      let isFound = false
+      for (const section of sections) {
+        const element = document.getElementById(section)
+        if (!element) continue
+
+        const offsetTop = element.offsetTop
+        const offsetHeight = element.offsetHeight
+
+        if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+          this.currentItem = `#${section}`
+          isFound = true
+          break
+        }
+      }
+
+      if (!isFound) {
+        this.currentItem = `not found`
+      }
     },
   },
 }
@@ -111,13 +159,15 @@ export default {
 .block-header {
   $headerTabletSize: 850px;
 
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
   overflow-y: auto;
+  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+  max-height: 100vh;
 }
 
 .block-header .base-container__inner {
@@ -147,7 +197,11 @@ export default {
   line-height: 48px;
 
   @media (max-width: $sizeMobile) {
-    max-width: 200px;
+    max-width: 50px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: var(--size-text-3xl);
   }
 }
 
@@ -163,7 +217,7 @@ export default {
   flex-direction: column;
   align-items: stretch;
   gap: 24px;
-  padding: 36px 24px 80px 24px;
+  margin: 36px 12px 60px 12px;
   width: 100%;
   background-color: var(--color-black);
 }
@@ -244,6 +298,6 @@ export default {
 
 .burger-leave-to {
   opacity: 0;
-  transform: translateX(-20px);
+  transform: translateX(-40px);
 }
 </style>

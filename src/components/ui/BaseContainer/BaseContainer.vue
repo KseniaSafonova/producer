@@ -21,7 +21,7 @@ export default {
   props: {
     tag: {
       type: String,
-      default: 'div',
+      default: 'section',
     },
 
     theme: {
