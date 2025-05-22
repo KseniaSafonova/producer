@@ -28,7 +28,7 @@ export default {
 
 <style lang="postcss">
 .block-main {
-  padding-bottom: 62px;
+  padding-bottom: 42px;
 }
 
 .block-main .base-container__inner {

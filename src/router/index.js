@@ -14,11 +14,15 @@ const router = createRouter({
   ],
   scrollBehavior(to, from) {
     if (to.hash) {
-      return {
-        el: to.hash,
-        top: 50,
-        behavior: 'smooth',
-      }
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve({
+            el: to.hash,
+            top: 80,
+            behavior: 'smooth',
+          })
+        }, 500)
+      })
     }
 
     return { top: 0 }

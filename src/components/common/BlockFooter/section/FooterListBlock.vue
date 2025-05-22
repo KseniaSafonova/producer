@@ -26,7 +26,7 @@
           {{ service.text }}
         </RouterLink>
 
-        <a v-if="service.href" :href="service.href" class="footer-list-block__link">
+        <a v-if="service.href" :href="service.href" target="_blank" class="footer-list-block__link">
           {{ service.text }}
         </a>
       </li>
@@ -100,7 +100,7 @@ export default {
 }
 
 .footer-list-block__list-item {
-  @media (max-width: 768px) {
+  @media (max-width: $sizeMobile) {
     margin-top: 10px;
   }
 }

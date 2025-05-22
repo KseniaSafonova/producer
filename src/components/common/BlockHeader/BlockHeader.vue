@@ -5,7 +5,7 @@
     class="block-header"
     :class="{ 'block-header_is-open': isMenuOpen, 'block-header_is-mobile': isMobile }"
   >
-    <span class="block-header__logo text-w700">Gleb Petrov</span>
+    <BaseLogo class="block-header__logo" />
 
     <div class="block-header__actions" v-if="isMobile">
       <Transition name="burger">
@@ -22,7 +22,7 @@
           v-if="isButtonShow"
           theme="light"
           size="small"
-          :to="{ name: 'PageLanding', hash: '#contacts' }"
+          :to="{ name: 'PageLanding', hash: '#footer' }"
           @click="closeMenu"
         >
           Контакты
@@ -143,6 +143,7 @@ export default {
         if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
           this.currentItem = `#${section}`
           isFound = true
+
           break
         }
       }
@@ -189,19 +190,14 @@ export default {
 }
 
 .block-header__logo {
-  font-family: var(--font-flex);
-  text-transform: uppercase;
   margin-right: auto;
 
-  font-size: var(--size-text-5xl);
-  line-height: 48px;
-
   @media (max-width: $sizeMobile) {
-    max-width: 50px;
+    max-width: 136px;
   }
 
-  @media (max-width: 375px) {
-    font-size: var(--size-text-3xl);
+  @media (max-width: 345px) {
+    max-width: 100px;
   }
 }
 

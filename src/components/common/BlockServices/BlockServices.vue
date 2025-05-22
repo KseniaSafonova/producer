@@ -1,34 +1,38 @@
 <template>
   <BaseContainer class="block-services">
-    <div class="block-services__container">
-      <BaseTitlesContainer
-        align="right"
-        title="Услуги"
-        subtitle="Основные направления"
-        class="block-services__title"
+    <BaseTitlesContainer
+      align="right"
+      title="Услуги"
+      subtitle="Основные направления"
+      class="block-services__title"
+    >
+    </BaseTitlesContainer>
+
+    <div class="block-services__services-section">
+      <div
+        v-for="(service, index) in servicesList"
+        :key="index"
+        class="block-services__service-item"
       >
-      </BaseTitlesContainer>
+        <SvgIcon :name="service.name" :size="20" class="block-services__service-img" />
 
-      <div class="block-services__services-section">
-        <div
-          v-for="(service, index) in servicesList"
-          :key="index"
-          class="block-services__service-item"
-        >
-          <SvgIcon :name="service.name" :size="20" class="block-services__service-img" />
-
-          <p class="block-services__service-title text-s text-w700">{{ service.title }}</p>
-          <p class="block-services__service-description text-3xs">{{ service.description }}</p>
-        </div>
+        <p class="block-services__service-title text-s text-w700">{{ service.title }}</p>
+        <p class="block-services__service-description text-3xs">{{ service.description }}</p>
       </div>
-
-      <div class="block-services__text-section text-l">
-        <p>Стоимость высчитывается после исследования задачи.</p>
-        <p>Каждый проект начинается с разговора и понимания. Только потом — цифры.</p>
-      </div>
-
-      <BaseButton href="" size="small" class="block-services__btn">Связаться</BaseButton>
     </div>
+
+    <div class="block-services__text-section text-l">
+      <p>Стоимость высчитывается после исследования задачи.</p>
+      <p>Каждый проект начинается с разговора и понимания. Только потом — цифры.</p>
+    </div>
+
+    <BaseButton
+      href=""
+      size="small"
+      :to="{ name: 'PageLanding', hash: '#contacts' }"
+      class="block-services__btn"
+      >Связаться</BaseButton
+    >
   </BaseContainer>
 </template>
 
@@ -66,13 +70,12 @@ export default {
 </script>
 
 <style lang="postcss">
-.block-services__container {
-  padding-top: 72px;
-  padding-bottom: 120px;
+.block-services {
+  padding-top: 60px;
+  padding-bottom: 40px;
 
-  @media screen and (max-width: $sizeMobile) {
-    padding-top: 60px;
-    padding-bottom: 60px;
+  @media (max-width: $sizeMobile) {
+    padding-top: 20px;
   }
 }
 

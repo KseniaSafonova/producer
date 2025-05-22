@@ -34,6 +34,7 @@
 
       <BaseButton
         href="https://docs.google.com/presentation/d/19Qhdi8mnNJEgEIKN8O-7NqRhBYQnq1Cd-QV_YvZkKtQ/edit?usp=sharing"
+        target="_blank"
         class="cases-section__button"
         >Портфолио
       </BaseButton>
@@ -101,8 +102,13 @@ export default {
 
 <style lang="postcss">
 .cases-section {
-  padding: 80px 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
   color: var(--color-primary);
+
+  @media (max-width: $sizeMobile) {
+    padding-top: 0px;
+  }
 }
 
 .cases-section__gallery {
@@ -110,9 +116,9 @@ export default {
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
   padding: 0;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 
-  @media (max-width: 768px) {
+  @media (max-width: $sizeMobile) {
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 4px;
   }
@@ -124,7 +130,7 @@ export default {
   align-items: center;
   flex-wrap: wrap;
 
-  @media (max-width: 768px) {
+  @media (max-width: $sizeMobile) {
     flex-direction: column;
     align-items: stretch;
   }
