@@ -62,7 +62,9 @@
         <BaseButton type="submit">Связаться со мной</BaseButton>
         <p class="contact-form__privacy">
           Нажимая на кнопку, я даю согласие на хранение, использование и обработку моих персональных
-          данных в соответствии с <router-link to="/privacy">Политика конфиденциальности</router-link>.
+          данных в соответствии с
+          <router-link :to="{ name: 'PagePrivacyPolicy' }">Политикой конфиденциальности</router-link
+          >.
         </p>
       </form>
 

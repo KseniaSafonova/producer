@@ -1,6 +1,5 @@
 <template>
   <div class="block-footer__list-block">
-
     <ul class="block-footer__list">
       <p class="heading-fifthly block-footer__list-header">Условия и политика</p>
 
@@ -28,7 +27,11 @@
     <ul class="block-footer__list">
       <p class="heading-fifthly block-footer__list-header">Услуги</p>
 
-      <li v-for="(service, index) in servicesList" :key="index" class="footer-list-block__list-item">
+      <li
+        v-for="(service, index) in servicesList"
+        :key="index"
+        class="footer-list-block__list-item"
+      >
         <RouterLink v-if="service.link" :to="service.link" class="footer-list-block__link">
           {{ service.text }}
         </RouterLink>
@@ -47,12 +50,12 @@ import { computed } from 'vue'
 export default {
   setup() {
     const legalList = computed(() => [
-      { text: 'Условия использования', link: '/terms' },
-      { text: 'Политика конфиденциальности', link: '/privacy' },
+      { text: 'Условия использования', link: { name: 'PageTermsOfUse' } },
+      { text: 'Политика конфиденциальности', link: { name: 'PagePrivacyPolicy' } },
     ])
 
     const navList = computed(() => {
-      return [      
+      return [
         { text: 'Главная', link: { name: 'PageLanding', hash: '#main' } },
         { text: 'Обо мне', link: { name: 'PageLanding', hash: '#about' } },
         { text: 'Связаться со мной', link: { name: 'PageLanding', hash: '#contacts' } },

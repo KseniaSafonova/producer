@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import LayoutDefault from '@/layouts/LayoutDefault.vue'
 import PageLanding from '@/views/PageLanding/PageLanding.vue'
+import PagePrivacyPolicy from '@/views/PagePrivacyPolicy/PagePrivacyPolicy.vue'
+import PageTermsOfUse from '@/views/PageTermsOfUse/PageTermsOfUse.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -11,8 +13,8 @@ const router = createRouter({
       component: LayoutDefault,
       children: [
         { path: '', name: 'PageLanding', component: PageLanding },
-        { path: 'privacy', name: 'PrivacyPolicy', component: () => import('@/components/common/BlockPrivacyPolicy/PrivacyPolicy.vue') },
-        { path: 'terms', name: 'TermsOfUse', component: () => import('@/components/common/BlockTermsOfUse/BlockTermsOfUse.vue')}
+        { path: 'privacy', name: 'PagePrivacyPolicy', component: PagePrivacyPolicy },
+        { path: 'terms', name: 'PageTermsOfUse', component: PageTermsOfUse },
       ],
     },
   ],

@@ -64,12 +64,6 @@ export default {
   }
 }
 
-.block-footer__logo {
-  @media (max-width: $sizeMobile) {
-    max-width: 136px;
-  }
-}
-
 .block-footer__main-block {
   display: flex;
 

@@ -191,14 +191,6 @@ export default {
 
 .block-header__logo {
   margin-right: auto;
-
-  @media (max-width: $sizeMobile) {
-    max-width: 136px;
-  }
-
-  @media (max-width: 345px) {
-    max-width: 100px;
-  }
 }
 
 .block-header__nav {

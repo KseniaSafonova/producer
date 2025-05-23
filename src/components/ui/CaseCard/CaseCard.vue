@@ -1,10 +1,6 @@
 <template>
   <div class="case-card">
-    <a
-      class="case-card__link"
-      href="https://www.youtube.com/@glebpetrovproduction"
-      target="_blank"
-    />
+    <a class="case-card__link" :href="href" target="_blank" />
 
     <img class="case-card__image" :src="image" :alt="title" />
 
