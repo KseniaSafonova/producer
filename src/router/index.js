@@ -9,7 +9,11 @@ const router = createRouter({
       path: '',
       name: 'LayoutDefault',
       component: LayoutDefault,
-      children: [{ path: '', name: 'PageLanding', component: PageLanding }],
+      children: [
+        { path: '', name: 'PageLanding', component: PageLanding },
+        { path: 'privacy', name: 'PrivacyPolicy', component: () => import('@/components/common/BlockPrivacyPolicy/PrivacyPolicy.vue') },
+        { path: 'terms', name: 'TermsOfUse', component: () => import('@/components/common/BlockTermsOfUse/BlockTermsOfUse.vue')}
+      ],
     },
   ],
   scrollBehavior(to, from) {
