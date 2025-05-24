@@ -166,6 +166,10 @@ const submitForm = async () => {
   max-width: 955px; /* согласованная ширина секции */
   margin: 0 auto;
 
+  @media (max-width: 1023px) {
+    gap: 60px;
+  }
+
   @media (max-width: $sizeMobile) {
     flex-direction: column;
     gap: 40px;

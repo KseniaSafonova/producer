@@ -70,5 +70,17 @@ export default {
   margin-right: auto;
   max-width: 1280px;
   width: 100%;
+  padding-left: 68px;
+  padding-right: 68px;
+
+  @media (max-width: 1023px) {
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+
+  @media (max-width: $sizeMobile) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 </style>

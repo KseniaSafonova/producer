@@ -158,7 +158,7 @@ export default {
 
 <style lang="postcss">
 .block-header {
-  $headerTabletSize: 850px;
+  $headerTabletSize: 880px;
 
   position: fixed;
   top: 0;
