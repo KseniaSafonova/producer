@@ -105,4 +105,31 @@ export default {
     margin-bottom: 12px;
   }
 }
+
+/* keyframes: плавное появление и исчезновение */
+@keyframes fadeOverlayOnce {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .case-card__overlay {
+    opacity: 0;
+    pointer-events: none;
+    animation: fadeOverlayOnce 6s ease-in-out 0.5s infinite;
+  }
+}
 </style>
