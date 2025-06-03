@@ -30,7 +30,7 @@
       </div>
 
       <div class="block-about__img-section">
-        <img class="block-about__img" src="./assets/img_about.png" alt="img about producer" />
+        <img class="block-about__img" src="./assets/img_about.jpg" alt="img about producer" />
       </div>
     </div>
   </BaseContainer>

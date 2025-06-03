@@ -12,11 +12,7 @@
       <CaseCard
         v-for="(item, index) in casesList"
         :key="index"
-        :image="
-          isMobile
-            ? getImageUrl(`./assets/case-mobile${index + 1}.jpg`)
-            : getImageUrl(`./assets/case${index + 1}.jpg`)
-        "
+        :image="isMobile ? item.imageMobile : item.image"
         :title="item.title"
         :description="item.description"
         :href="item.href"
@@ -50,6 +46,18 @@
 <script>
 import { useDeviceStore } from '@/store/deviceStore'
 import { storeToRefs } from 'pinia'
+import case1 from './assets/case1.jpg'
+import case2 from './assets/case2.jpg'
+import case3 from './assets/case3.jpg'
+import case4 from './assets/case4.jpg'
+import case5 from './assets/case5.jpg'
+import case6 from './assets/case6.jpg'
+import caseMobile1 from './assets/case-mobile1.jpg'
+import caseMobile2 from './assets/case-mobile2.jpg'
+import caseMobile3 from './assets/case-mobile3.jpg'
+import caseMobile4 from './assets/case-mobile4.jpg'
+import caseMobile5 from './assets/case-mobile5.jpg'
+import caseMobile6 from './assets/case-mobile6.jpg'
 
 export default {
   name: 'CasesSection',
@@ -64,31 +72,43 @@ export default {
     casesList() {
       const cases = [
         {
+          image: case1,
+          imageMobile: caseMobile1,
           title: 'Игровые проекты и реклама',
           description: 'Ролики с актёрами, графикой и сценариями, которые цепляют',
           href: 'https://youtube.com/playlist?list=PLVPGXYtoA6q3nU00MowoRSJ_QkpdxWgHj&si=3yZLClvaZd9XZpxV',
         },
         {
+          image: case2,
+          imageMobile: caseMobile2,
           title: 'Имиджевые фильмы',
           description: 'Сильный визуал и эмоция — для брендов, производств, продуктов и событий',
           href: 'https://www.youtube.com/playlist?list=PLVPGXYtoA6q3L8F3yin7-asbKhpSNdoPG',
         },
         {
+          image: case3,
+          imageMobile: caseMobile3,
           title: 'Туризм и музыка',
           description: 'Форматы на стыке культуры, искусства, приключений и саунд-дизайна',
           href: 'https://www.youtube.com/playlist?list=PLVPGXYtoA6q2sQHgmHA6pazbNgmY1BXXl',
         },
         {
+          image: case4,
+          imageMobile: caseMobile4,
           title: 'YouTube и юмор',
           description: 'Контент, который живёт в онлайне и офлайне, цепляет и разлетается',
           href: 'https://www.youtube.com/playlist?list=PLVPGXYtoA6q2EAfg4KB6aIWhLWhtu_KYd',
         },
         {
+          image: case5,
+          imageMobile: caseMobile5,
           title: 'Технологии и инсталляции',
           description: 'Кейсы с вовлечением, дополненной реальностью, IT и новыми форматами',
           href: 'https://youtube.com/playlist?list=PLVPGXYtoA6q3fhSMovULuy6_fguqEAgle&si=m-jyEuq8mKKt28aQ',
         },
         {
+          image: case6,
+          imageMobile: caseMobile6,
           title: 'Ивенты',
           description: 'От концепций до бекстейджа мероприятий',
           href: 'https://www.youtube.com/playlist?list=PLVPGXYtoA6q3-7kst5zEcfEp4YHi7JXD1',
@@ -96,12 +116,6 @@ export default {
       ]
 
       return cases
-    },
-  },
-
-  methods: {
-    getImageUrl(name) {
-      return new URL(name, import.meta.url).href
     },
   },
 }
