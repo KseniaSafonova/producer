@@ -4,7 +4,9 @@
 
     <img class="case-card__image" :src="image" :alt="title" />
 
-    <div class="case-card__overlay">
+    <SvgIcon name="pointer" :icon-size="36" class="case-card__pointer" />
+
+    <div class="case-card__overlay" :class="{ 'case-card__overlay_visible': isMobile }">
       <h4 class="case-card__title text-l">{{ title }}</h4>
       <hr class="case-card__devider" />
       <p class="case-card__description text-3xs">{{ description }}</p>
@@ -15,12 +17,12 @@
 <script>
 export default {
   name: 'CaseCard',
-
   props: {
     image: String,
     title: String,
     description: String,
     href: String,
+    isMobile: Boolean,
   },
 }
 </script>
@@ -32,7 +34,20 @@ export default {
   height: 100%;
   width: 100%;
   cursor: pointer;
-  overflow: hidden;
+}
+
+.case-card__pointer {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border-radius: 6px;
+  z-index: 15;
+
+  @media (max-width: $sizeMobile) {
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+  }
 }
 
 .case-card__image {
@@ -51,6 +66,7 @@ export default {
   inset: 0;
   display: block;
   z-index: 10;
+  text-decoration: none;
 }
 
 .case-card__overlay {
@@ -64,24 +80,28 @@ export default {
   justify-content: flex-end;
   padding: 24px;
   transition: opacity 0.3s ease;
-  pointer-events: none;
-  text-decoration: none;
 
-  @media (max-width: 500px) {
+  @media (max-width: 800px) {
     padding: 5px;
+  }
+
+  @media (max-width: $sizeMobile) {
     justify-content: center;
   }
 }
 
 .case-card:hover .case-card__overlay {
   opacity: 1;
-  pointer-events: auto;
+}
+
+.case-card__overlay_visible {
+  opacity: 1;
 }
 
 .case-card__description {
   margin-bottom: 86px;
 
-  @media (max-width: 500px) {
+  @media (max-width: $sizeMobile) {
     font-size: var(--size-text-5xs);
     margin-bottom: 0px;
   }
@@ -90,7 +110,7 @@ export default {
 .case-card__title {
   margin-bottom: 12px;
 
-  @media (max-width: 400px) {
+  @media (max-width: $sizeMobile) {
     font-size: var(--size-text-3xs);
   }
 }
@@ -101,35 +121,8 @@ export default {
   background-color: var(--color-white);
   margin-bottom: 24px;
 
-  @media (max-width: 400px) {
+  @media (max-width: $sizeMobile) {
     margin-bottom: 12px;
-  }
-}
-
-/* keyframes: плавное появление и исчезновение */
-@keyframes fadeOverlayOnce {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@media (max-width: 500px) {
-  .case-card__overlay {
-    opacity: 0;
-    pointer-events: none;
-    animation: fadeOverlayOnce 6s ease-in-out 0.5s infinite;
   }
 }
 </style>

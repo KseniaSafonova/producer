@@ -16,6 +16,7 @@
         :title="item.title"
         :description="item.description"
         :href="item.href"
+        :is-mobile="isMobile"
       />
     </div>
 
