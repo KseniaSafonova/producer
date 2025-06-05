@@ -40,13 +40,11 @@ export default {
   position: absolute;
   top: 8px;
   right: 8px;
-  border-radius: 6px;
   z-index: 15;
 
   @media (max-width: $sizeMobile) {
     width: 22px;
     height: 22px;
-    border-radius: 4px;
   }
 }
 

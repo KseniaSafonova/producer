@@ -3,11 +3,7 @@
     <div class="block-contacts__content">
       <!-- Левая часть: текстовая информация -->
       <div class="block-contacts__info">
-        <BaseTitlesContainer
-          title="Контакты"
-          subtitle="Заинтересованы
-                     в сотрудничестве?"
-        />
+        <BaseTitlesContainer title="Контакты" subtitle="Заинтересованы в сотрудничестве?" />
         <p class="block-contacts__info-text">
           Хотите обсудить идеи или задать вопросы?
           <span class="block">
