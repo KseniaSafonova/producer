@@ -89,6 +89,10 @@ export default {
   min-width: 200px;
 }
 
+.block-footer__list:nth-child(2) {
+  padding-left: 25px;
+}
+
 .block-footer__list-header {
   margin-bottom: 32px;
   color: var(--color-white);
