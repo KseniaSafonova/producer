@@ -7,7 +7,7 @@
     class="icon-button"
     :class="{ 'icon-button_pill': isPill }"
   >
-    <SvgIcon :name="name" />
+    <SvgIcon :name="name" :icon-size="iconSize ? iconSize : 24" />
   </Component>
 </template>
 
@@ -28,6 +28,10 @@ export default {
 
     isPill: {
       type: Boolean,
+    },
+
+    iconSize: {
+      type: Number,
     },
   },
 

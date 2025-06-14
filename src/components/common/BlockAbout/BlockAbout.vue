@@ -30,7 +30,7 @@
       </div>
 
       <div class="block-about__img-section">
-        <img class="block-about__img" src="./assets/img_about.png" alt="img about producer" />
+        <img class="block-about__img" src="./assets/img_about.jpg" alt="img about producer" />
       </div>
     </div>
   </BaseContainer>
@@ -63,7 +63,7 @@ export default {
 
   methods: {
     checkScreen() {
-      this.isMobile = window.innerWidth <= 1200
+      this.isMobile = window.innerWidth <= 1023
     },
   },
 }
@@ -71,7 +71,7 @@ export default {
 
 <style lang="postcss">
 .block-about {
-  $sizeTablet: 1200px;
+  $sizeTablet: 1023px;
 
   overflow: hidden;
   padding-bottom: 28px;
@@ -95,8 +95,15 @@ export default {
   padding-right: 25%;
 
   @media screen and (max-width: $sizeTablet) {
-    margin: -15px -15px;
-    padding: 15px;
+    margin: -20px -38px;
+    padding: 20px 38px;
+  }
+
+  @media screen and (max-width: $sizeMobile) {
+    margin-left: -12px;
+    margin-right: -12px;
+    padding-right: 12px;
+    padding-left: 12px;
   }
 }
 

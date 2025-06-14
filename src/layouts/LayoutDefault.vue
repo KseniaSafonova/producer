@@ -7,8 +7,7 @@
     <main class="layout-default__main">
       <RouterView />
     </main>
-
-    <BlockFooter id="contacts" />
+    <BlockFooter id="footer" />
   </div>
 </template>
 
