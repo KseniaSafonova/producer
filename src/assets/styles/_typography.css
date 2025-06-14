@@ -88,10 +88,6 @@
 
 .text-l {
   font-size: var(--size-text-l); /*20px*/
-
-  @media screen and (max-width: $sizeMobile) {
-    font-size: var(--size-text-xs); /*16px*/
-  }
 }
 
 .text-m {

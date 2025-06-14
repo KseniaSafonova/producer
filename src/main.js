@@ -12,6 +12,4 @@ const app = createApp(App)
 
 app.use(createPinia())
 app.use(router)
-const deviceStore = useDeviceStore()
-deviceStore.init()
 app.mount('#app')

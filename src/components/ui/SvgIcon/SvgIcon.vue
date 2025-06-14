@@ -34,7 +34,6 @@ export default {
 <style>
 .svg-icon {
   fill: currentColor;
-
   width: v-bind(size);
   height: v-bind(size);
   flex-shrink: 0;
